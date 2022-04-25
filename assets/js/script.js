@@ -71,7 +71,8 @@ var printLocal = function () {
         schedule = JSON.parse(temp);
 
         for (var i = 0; i < schedule.length; i++) {
-            var textAreaEl = document.querySelector("#" + schedule[i].hour);
+            var que = "#" + schedule[i].hour;
+            var textAreaEl = document.querySelector(que);
             textAreaEl.textContent = schedule[i].text;
         }
     }
