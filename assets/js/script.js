@@ -1,8 +1,3 @@
-$(document).ready(function () {
-
-
-});
-
 var schedule = [];
 
 // Current day is displayed on top of page
