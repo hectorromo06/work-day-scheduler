@@ -68,6 +68,19 @@ $('.saveBtn').click(function (event) {
 
 });
 
+// print LocalStorage
+var printLocal = function () {
+    var temp = localStorage.getItem('schedule');
 
+    if (temp != null) {
+        schedule = JSON.parse(temp);
+
+        for (var i = 0; i < schedule.length; i++) {
+            var textAreaEl = document.querySelector("#" + schedule[i].hour);
+            textAreaEl.textContent = schedule[i].text;
+        }
+    }
+}
 
 time();
+printLocal();
