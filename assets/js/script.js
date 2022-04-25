@@ -82,5 +82,25 @@ var printLocal = function () {
     }
 }
 
+// media query
+$(window).resize(function () {
+    if ($(window).width() <= 768) {
+        var element = document.querySelector(".time-block.row");
+        if (element != null) {
+            element.classList.remove("row");
+            element.classList.add("column");
+        }
+    } else {
+        var element = document.querySelector(".time-block.row");
+        if (element == null) {
+            var small = document.querySelectorAll(".time-block.column");
+            for (var i = 0; i < small.length; i++) {
+                small[i].classList.remove("column");
+                small[i].classList.add("row");
+            }
+        }
+    }
+});
+
 time();
 printLocal();
